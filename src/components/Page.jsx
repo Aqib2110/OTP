@@ -27,7 +27,7 @@ const Page = () => {
 </div>
 
 <div className='w-full h-1/3'>
-<p className='flex mt-3 justify-center text-[20px] text-center mb-3 text-white'>Please enter your birth year,we will not use it anywhere</p>
+<p className='flex mt-3 justify-center text-[20px] px-2 text-center mb-3 text-white'>Please enter your birth year,we will not use it anywhere</p>
 <div className='flex flex-col mt-6 gap-12'>
     <div className='flex sm:gap-3 justify-center gap-2'>
     <input type="text" maxLength={4} inputMode="numeric" value={count} onChange={handleChange}  className={`border text-white border-none py-1.5 px-10 xl:py-3 bg-[#19406a]  md:w-3/12 xl:3/12 w-3/6 mx-auto rounded-xl`}/>
