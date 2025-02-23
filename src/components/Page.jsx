@@ -7,6 +7,14 @@ const Page = () => {
     const handleChange = (e)=>{
     setCount(e.target.value)
     }
+       const handleKey = (e)=>{
+      if(e.key == "Backspace"){
+        setCount(count=>count.slice(0,-1))
+      }
+      if (!/^[0-9]$/.test(e.key)) {
+        e.preventDefault();
+      }
+    }
     const handleContinue = ()=>{
     if(count.length >= 4){
       navigate('/otp');
@@ -30,7 +38,7 @@ const Page = () => {
 <p className='flex mt-3 justify-center text-[20px] px-2 text-center mb-3 text-white'>Please enter your birth year,we will not use it anywhere</p>
 <div className='flex flex-col mt-6 gap-12'>
     <div className='flex sm:gap-3 justify-center gap-2'>
-    <input type="text" maxLength={4} inputMode="numeric" value={count} onChange={handleChange}  className={`border text-white border-none py-1.5 px-10 xl:py-3 bg-[#19406a]  md:w-3/12 xl:3/12 w-3/6 mx-auto rounded-xl`}/>
+    <input type="text" onKeyDown={handleKey} maxLength={4}  inputMode="numeric" value={count} onChange={handleChange}  className={`border text-white border-none py-1.5 px-10 xl:py-3 bg-[#19406a]  md:w-3/12 xl:3/12 w-3/6 mx-auto rounded-xl`}/>
  
     </div>
   <input type="button" value="continue" onClick={handleContinue}  className={`border cursor-pointer text-white border-none py-1.5 px-10  ${count.length <= 3 ? "bg-[#8094ad]" : "bg-green-900" } xl:py-3 text-center md:w-3/12 xl:3/12 w-3/6 mx-auto rounded-xl`}/>
