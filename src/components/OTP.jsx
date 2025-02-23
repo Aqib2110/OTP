@@ -156,7 +156,7 @@ const handleKey = (e, num) => {
 </div>
 
 <div className='w-full h-1/3'>
-<p className='flex mt-3 justify-center text-[20px] text-center mb-3 text-white'>Please enter the code that, we have sent to your email</p>
+<p className='flex mt-3 justify-center text-[20px] px-2 text-center mb-3 text-white'>Please enter the code that, we have sent to your email</p>
 <div className='flex flex-col mt-6 gap-12'>
     <div className='flex sm:gap-3 justify-center gap-2'>
     <input type="text" inputMode="numeric" ref={input1} onKeyDown={(e)=>{handleKey(e,"1")}} onChange={()=>{handleChange('1')}} maxLength={1} className='border mt-0 text-center sm:w-1/12 md:w-1/16 w-1/8  bg-[#19406a] py-2 px-1  text-white border-none rounded-xl'/>
