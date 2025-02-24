@@ -6,6 +6,7 @@ import { Routes,Route,BrowserRouter } from 'react-router-dom'
 import './App.css'
 import Page from './components/Page'
 import OTP from './components/OTP'
+import Email from './components/Email'
 function App() {
   
   return (
@@ -13,6 +14,7 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path='/'element={ <Page />}/>
+      <Route path='/email'element={ <Email />}/>
       <Route path='/otp'element={ <OTP />}/>
     </Routes>
     </BrowserRouter>
@@ -21,3 +23,27 @@ function App() {
 }
 
 export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* <BrowserRouter>
+<Routes>
+  <Route path='/'element={ <Page />}/>
+  <Route path='/otp'element={ <OTP />}/>
+</Routes>
+</BrowserRouter> */}
