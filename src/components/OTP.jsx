@@ -158,8 +158,6 @@ const handleKey = (e, num) => {
 
 <div className='w-full h-1/3'>
 <p className='flex mt-3 justify-center px-2 text-[15px] text-center mb-3 text-white'>Please enter the verification code sent to your email id *********@gmail.com</p>
-
-<p className='flex mt-3 justify-center text-[20px] px-2 text-center mb-3 text-white'>Please enter the code that, we have sent to your email</p>
 <div className='flex flex-col mt-6 gap-12'>
     <div className='flex sm:gap-3 justify-center gap-2'>
     <input type="text" inputMode="numeric" ref={input1} onKeyDown={(e)=>{handleKey(e,"1")}} onChange={()=>{handleChange('1')}} maxLength={1} className='border mt-0 text-center sm:w-1/12 md:w-1/16 w-1/8  bg-[#19406a] py-2 px-1  text-white border-none rounded-xl'/>
@@ -170,9 +168,6 @@ const handleKey = (e, num) => {
   <input type="text" inputMode="numeric"  ref={input5} onKeyDown={(e)=>{handleKey(e,"5")}} onChange={()=>{handleChange('5')}} maxLength={1} className='border mt-0 text-center  sm:w-1/12 w-1/8 md:w-1/16  bg-[#19406a] py-2 px-1  text-white border-none rounded-xl'/>
   <input type="text" inputMode="numeric"  ref={input6} onKeyDown={(e)=>{handleKey(e,"6")}} onChange={()=>{handleChange('6')}}  maxLength={1} className='border mt-0 text-center sm:w-1/12 w-1/8 md:w-1/16 bg-[#19406a] sm:py-2 py-1 px-1  text-white border-none rounded-xl'/>
 
-  <input type="text" inputMode="numeric" ref={input4} onKeyDown={(e)=>{handleKey(e,"4")}} onChange={()=>{handleChange('4')}} maxLength={1} className='border mt-0 text-center sm:w-1/12 w-1/8 md:w-1/16 bg-[#19406a] py-2 px-1  text-white border-none rounded-xl'/>
-  <input type="text" inputMode="numeric" ref={input5} onKeyDown={(e)=>{handleKey(e,"5")}} onChange={()=>{handleChange('5')}} maxLength={1} className='border mt-0 text-center  sm:w-1/12 w-1/8 md:w-1/16  bg-[#19406a] py-2 px-1  text-white border-none rounded-xl'/>
-  <input type="text" inputMode="numeric" ref={input6} onKeyDown={(e)=>{handleKey(e,"6")}} onChange={()=>{handleChange('6')}}  maxLength={1} className='border mt-0 text-center sm:w-1/12 w-1/8 md:w-1/16 bg-[#19406a] sm:py-2 py-1 px-1  text-white border-none rounded-xl'/>
 
     </div>
   <input type="button" value="Verify" onClick={handleContinue}  className={`border cursor-pointer  border-none py-1.5 px-10  ${count.length < 1 ? "bg-[#8094ad] text-white" : "bg-green-900 text-black" } xl:py-3 text-center md:w-3/12 xl:3/12 w-3/6 mx-auto rounded-xl`}/>
