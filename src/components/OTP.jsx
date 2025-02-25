@@ -1,6 +1,8 @@
 import React, { useRef } from 'react'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 const OTP = () => {
+  const navigate = useNavigate();
   const [count, setCount] = useState('')
   const input1 = useRef();
   const input2 = useRef();
@@ -31,21 +33,24 @@ const handleChange = (number)=>{
     console.log("aqib");
   }
   else  if(number == 6){
-    setCount('ok');
+    setCount('okkkkk');
   }
 }
 
 const handleContinue = () => {
   const inputs = [input1, input2, input3, input4, input5, input6];
   const otp = inputs.map(input => input.current?.value || "").join('');
+  const otpnew = '123456';
   if(otp.length == 6){
-    console.log("OTP:", otp);
+   if(otp == otpnew){
+    navigate('/home');
     input1.current.value = "";
     input2.current.value = "";
     input3.current.value = "";
     input4.current.value = "";
     input5.current.value = "";
     input6.current.value = "";
+   }
   }
 };
 
@@ -89,21 +94,23 @@ const handleKey = (e, num) => {
     } 
     else if (num == 5){
       input5.current.value = "";
-      
+      setCount("");
     }
     else if (num == 4){
       input4.current.value = "";
-     
+      setCount("");
     }
     else if (num == 3){
       input3.current.value = "";
-  
+      setCount("");
     }
     else if (num == 2){
       input2.current.value = "";
+      setCount("");
     }
     else if (num == 1){
       input1.current.value = "";
+      setCount("");
     }
   }
   else if (e.key === "ArrowRight") {
@@ -169,8 +176,10 @@ const handleKey = (e, num) => {
   <input type="text" inputMode="numeric"  ref={input6} onKeyDown={(e)=>{handleKey(e,"6")}} onChange={()=>{handleChange('6')}}  maxLength={1} className='border mt-0 text-center sm:w-1/12 w-1/8 md:w-1/16 bg-[#19406a] sm:py-2 py-1 px-1  text-white border-none rounded-xl'/>
 
 
+ 
+
     </div>
-  <input type="button" value="Verify" onClick={handleContinue}  className={`border cursor-pointer  border-none py-1.5 px-10  ${count.length < 1 ? "bg-[#8094ad] text-white" : "bg-green-900 text-black" } xl:py-3 text-center md:w-3/12 xl:3/12 w-3/6 mx-auto rounded-xl`}/>
+  <input type="button" value="Verify" onClick={handleContinue}  className={`border cursor-pointer  border-none py-1.5 px-10  ${count.length == 6 ? "bg-green-900 text-black":"bg-[#8094ad] text-white"  } xl:py-3 text-center md:w-3/12 xl:3/12 w-3/6 mx-auto rounded-xl`}/>
 </div>
 </div>
 

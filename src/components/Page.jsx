@@ -42,7 +42,10 @@ const Page = () => {
     <div className='flex sm:gap-3 justify-center gap-2'>
 
     <input type="text" inputMode="numeric" placeholder='Your Birth year' value={count} onKeyDown={handleKey} maxLength={4} onChange={handleChange}  className={`border text-white border-none py-1.5 px-10 xl:py-3 bg-[#19406a]  md:w-3/12 xl:3/12 w-3/6 mx-auto rounded-xl`}/>
+
 {/*     <input type="text" onKeyDown={handleKey} maxLength={4}  inputMode="numeric" value={count} onChange={handleChange}  className={`border text-white border-none py-1.5 px-10 xl:py-3 bg-[#19406a]  md:w-3/12 xl:3/12 w-3/6 mx-auto rounded-xl`}/> */}
+
+    {/* <input type="text" onKeyDown={handleKey} maxLength={4}   value={count} onChange={handleChange}  className={`border text-white border-none py-1.5 px-10 xl:py-3 bg-[#19406a]  md:w-3/12 xl:3/12 w-3/6 mx-auto rounded-xl`}/> */}
 
  
     </div>
