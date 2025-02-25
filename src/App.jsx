@@ -7,17 +7,19 @@ import './App.css'
 import Page from './components/Page'
 import OTP from './components/OTP'
 import Email from './components/Email'
+import Home from './components/Home'
 function App() {
   
   return (
     <>
-    <BrowserRouter>
-    <Routes>
-      <Route path='/'element={ <Page />}/>
-      <Route path='/email'element={ <Email />}/>
-      <Route path='/otp'element={ <OTP />}/>
-    </Routes>
-    </BrowserRouter>
+  <BrowserRouter>
+<Routes>
+  <Route path='/'element={ <Page />}/>
+  <Route path='/email'element={ <Email />}/>
+  <Route path='/otp'element={ <OTP />}/>
+  <Route path='/home'element={ <Home />}/>
+</Routes>
+</BrowserRouter> 
     </>
   )
 }
@@ -41,9 +43,4 @@ export default App
 
 
 
-{/* <BrowserRouter>
-<Routes>
-  <Route path='/'element={ <Page />}/>
-  <Route path='/otp'element={ <OTP />}/>
-</Routes>
-</BrowserRouter> */}
+
