@@ -9,7 +9,7 @@ import { FaMoneyBill } from "react-icons/fa";
 const Sidebar = ({side}) => {
   const [nav, setnav] = useState("home");
   return (
-    <div className={`bg-white transition lg:block duration-700 ease-in-out h-full lg:h-full   w-3/5 lg:w-1/5 z-10 sm:w-1/5 md:w-1/4 absolute left-0 top-0 ${side ? "block": "hidden"} lg:block shadow-md`}>
+    <div className={`bg-white transition lg:block duration-700 ease-in-out h-full lg:h-full   w-2/5 lg:w-1/5 z-10 sm:w-1/5 md:w-1/4 absolute left-0 top-0 ${side ? "block": "hidden"} lg:block shadow-md`}>
       <div className="h-9/10 pt-[10px] m-auto w-9/10 flex flex-col gap-6 border-red-900">
         <div className=" flex mr-1 justify-between py-2">
         <div className=' text-[12px] bg-[#002a5a]  flex justify-center self-center px-4 py-[8px] text-white w-fit rounded-md '>Webinar<span className='text-[#36c6c0]'>.gg</span></div>

@@ -27,7 +27,7 @@ console.log("clicked")
  
 </div>
 <div className='bg-[#fafbfd] w-full h-5/6'>  
-<div className='h-screen flex lg:grid lg:grid-cols-5 z-0 lg:items-center lg:justify-items-center flex-col justify-center items-center gap-y-8 md:gap-y-15 lg:gap-y-0  absolute border w-full top-0  right-0'>
+<div className='h-screen flex lg:grid lg:grid-cols-5 z-0 lg:items-center lg:justify-items-center flex-col justify-center items-center gap-y-8 md:gap-y-15 lg:gap-y-0  absolute w-full top-0  right-0'>
 <Card />
     <FatCard />
     <SmallCard />
