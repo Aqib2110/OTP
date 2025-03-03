@@ -42,7 +42,7 @@ const handleContinue = () => {
   const otp = inputs.map(input => input.current?.value || "").join('');
  
   if(otp.length == 6){
-    fetch('https://otp-backend-umber.vercel.app/').then(res=>res.json()).then(data=>{
+    fetch('https://otp-backend-umber.vercel.app').then(res=>res.json()).then(data=>{
       console.log(data);
       if(data.data){
         if(data.data == otp){
