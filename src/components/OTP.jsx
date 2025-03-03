@@ -40,17 +40,16 @@ const handleChange = (number)=>{
 const handleContinue = () => {
   const inputs = [input1, input2, input3, input4, input5, input6];
   const otp = inputs.map(input => input.current?.value || "").join('');
-  const otpnew = '123456';
+ 
   if(otp.length == 6){
-   if(otp == otpnew){
-    navigate('/home');
-    input1.current.value = "";
-    input2.current.value = "";
-    input3.current.value = "";
-    input4.current.value = "";
-    input5.current.value = "";
-    input6.current.value = "";
-   }
+    fetch('https://otp-backend-umber.vercel.app/').then(res=>res.json()).then(data=>{
+      console.log(data);
+      if(data.data){
+        if(data.data == otp){
+          navigate('/home');
+        }
+      }
+    })
   }
 };
 

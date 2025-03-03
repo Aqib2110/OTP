@@ -7,10 +7,23 @@ const Email = () => {
     const handleChange = (e)=>{
         setCount(e.target.value);
     }
-
+//////////////////////  "build": "vite build",
     const handleContinue = ()=>{
     if(count.endsWith('@gmail.com')){
-      navigate('/otp');
+      console.log(count);
+      fetch('https://otp-backend-umber.vercel.app/email',{
+        method:"POST",
+        headers:{
+          'Content-Type':'application/json'
+        },
+        body:JSON.stringify({
+          "email": count
+        }),
+      }).then(res=>res.json()).then(data=>{
+        if(data.message){
+          navigate('/otp');
+        }
+      })
     }
     }
   return (
